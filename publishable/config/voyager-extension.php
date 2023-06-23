@@ -80,4 +80,19 @@ return [
 
     'assets_path_prefix' => 'admin',
 
+    /*
+    |
+    | Media allowed mimes files
+    |
+    */
+
+    'media' => [
+        'allowed_mimes' => [
+            'jpeg',
+            'jpg',
+            'png',
+            'gif',
+        ]
+    ]
+
 ];

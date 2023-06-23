@@ -35,7 +35,7 @@ class VoyagerExtensionRootController extends VoyagerController
 
         $ext = $file->guessClientExtension();
 
-        if (in_array($ext, ['jpeg', 'jpg', 'png', 'gif'])) {
+        if (in_array($ext, config('voyager-extension.media.allowed_mimes', ['jpeg', 'jpg', 'png', 'gif']))) {
             $image = Image::make($file)
                 ->resize($resizeWidth, $resizeHeight, function (Constraint $constraint) {
                     $constraint->aspectRatio();
